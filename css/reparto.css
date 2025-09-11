@@ -1,0 +1,144 @@
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+#video {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    background-image: url(../contenidoPersonajes/yamiGif.gif);
+    padding-bottom: 5rem;
+}
+
+h1 {
+    font-size: 4.375rem;
+    margin-left: 5rem;
+    color: white;
+}
+
+h1, h2 {    
+    opacity: 2;
+    transition: opacity 2s ease;
+}
+
+article {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+    height: 62.5rem;
+}
+
+#articleAsta       { background-image: url(../contenidoPersonajes/asta.webp); }
+#articleYuno       { background-image: url(../contenidoPersonajes/yuno.webp); }
+#articleNoelle     { background-image: url(../contenidoPersonajes/noelle.webp); }
+#articleYami       { background-image: url(../contenidoPersonajes/yami.webp); }
+#articleJulius     { background-image: url(../contenidoPersonajes/julius.webp); }
+#articleConradLeto { background-image: url(../contenidoPersonajes/conradLeto.webp); }
+#articleEdward     { background-image: url(../contenidoPersonajes/edwardAvalache.webp); }
+#articlePrincia    { background-image: url(../contenidoPersonajes/princia.webp); }
+#articleJester     { background-image: url(../contenidoPersonajes/jester.webp); }
+#articleMillie     { background-image: url(../contenidoPersonajes/millie.webp); }
+
+#articleAsta > .texto {
+    margin-bottom: 3.125rem;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 31.25rem;
+    z-index: 1001;
+    align-items: center;
+    justify-content: center;
+    margin: 1.25rem;
+    color: #e0e0e0;
+    font-family: 'texto';
+    text-align: center;
+}
+
+.texto > ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto > h2 {
+    font-size: 2.5rem;
+    font-family: 'black';
+    letter-spacing: 0.375rem;
+}
+
+.texto > p {
+    text-align: center;
+    font-size: 1.125rem;
+}
+
+.texto > ul > li {
+    font-size: 1.25rem;
+}
+
+.boxShadow {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0) 50%);
+    z-index: 1000;
+    width: 95%;
+    height: 62.5rem;
+    position: absolute;
+}
+
+span {
+    color: #DECCB0;
+}
+
+@media (325px <= width <= 1400px) {
+
+    h1 {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        top: 100px;
+    }
+
+    article {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        z-index: 999;
+    }
+
+    #video {background-position-x: -900px;}
+
+    #articleAsta {background-position-x: -800px;}
+    #articleYuno {background-position-x: -800px;}
+    #articleNoelle {background-position-x: -660px;}
+    #articleYami {background-position-x: -650px;}
+    #articleJulius {background-position-x: -700px;}
+    #articleConradLeto {background-position-x: -700px;}
+    #articleEdward{background-position-x: -700px;}
+    #articlePrincia {background-position-x: -650px;}
+    #articleJester {background-position-x: -600px;}
+    #articleMillie {background-position-x: -740px;}
+
+    #articleAsta > .texto {
+        margin-bottom: 0;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    .boxShadow {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%);
+        width: 100%;
+    }
+
+    h2 {
+        margin: 20px 0;
+    }
+
+    .texto {
+        margin: 0 5px;
+        row-gap: 0;
+    }
+}

@@ -1,0 +1,434 @@
+/* Estructura general */
+section {
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 5rem;
+    opacity: 2;
+    transition: opacity 2s ease;
+}
+
+h2 {
+    font-family: 'black';
+    font-size: 3.75rem;
+    letter-spacing: 0.375rem;
+    text-align: center;
+    opacity: 2;
+    transition: opacity 2s ease;
+}
+
+p {
+    font-size: 1.80rem;
+    font-family: 'texto';
+    line-height: 3rem;
+    text-align: center;
+}
+
+/* Video fondo*/
+#containerVideo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#containerVideo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.445);
+    z-index: 1;
+}
+
+#containerVideo > div {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    text-align: center;
+}
+
+.videoFondo {
+    width: 100%;
+}
+
+/* Botón con gradiente */
+.linkMas {
+    width: 12.5rem;
+    text-align: center;
+    border-radius: 0.50rem;
+    font-size: 1.875rem;
+    color: #ffffff;
+    border: solid 1px white;
+    position: relative;
+    z-index: 0;
+    transition: all 0.3s ease;
+}
+
+.linkMas::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 0.50rem;
+    background: linear-gradient(90deg, #8ea6b4, #cdd3d8);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.linkMas:hover {
+    color: #000000;
+}
+
+.linkMas:hover::after {
+    width: 100%;
+}
+
+/* Sobre la película */
+#sobreLaPelicula {
+    height: 56.25rem;
+    background-image: url(../contenidoIndex/fondoBlackClover.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-position 2.5s ease-out;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    padding-top: 11.25rem;
+    padding-right: 10rem;
+}
+
+#sobreLaPelicula > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    row-gap: 2.5rem;
+    flex-basis: 31.25rem;
+}
+
+/* Reparto */
+#reparto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+}
+
+#textoReparto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    row-gap: 2.5rem;
+    flex-basis: 60rem;
+}
+
+#reparto > .imagenes {
+    display: flex;
+    flex-direction: column;
+}
+
+.figurePersonajes img {
+    transition: scale 0.5s ease;
+}
+
+.figurePersonajes:hover img {
+    scale: 1.15;
+}
+
+#miCarrusel {
+    display: none;
+}
+
+.personajes {
+    width: 15.5rem;
+    height: auto;
+    padding: 0;
+    border-radius: 1rem;
+    box-shadow:
+    0 0.25rem 0.5rem rgba(100, 100, 100, 0.4),
+    0 0.5rem 1rem rgba(200, 200, 200, 0.3),
+    0 0.75rem 1.5rem rgba(255, 255, 255, 0.2);
+    margin-right: 50px;
+}
+
+/* Curiosidades */
+#curiosidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.875rem;
+}
+
+#textoCuriosidades {
+    font-family: 'texto';
+    row-gap: 1.25rem;
+}
+
+#imagenesCuriosidades > figure {
+    margin: 0;
+    padding: 0;
+}
+
+#imagenesCuriosidades + div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50rem;
+    padding: 0;
+    margin: 0;
+}
+
+.personajesCuriosidades {
+    border-radius: 0.625rem;
+}
+
+.personajesCuriosidades > img {
+    width: 50rem;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow:
+        0 0.625rem 1.25rem rgba(255, 255, 255, 0.363),
+        0 0 0.625rem rgba(255, 255, 255, 0.664);
+    transition: scale 0.5s ease;
+}
+
+.personajesCuriosidades img:hover {
+    scale: 0.9;
+}
+
+/* Contacto */
+#contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    column-gap: 5rem;
+}
+
+#contacto > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.25rem;
+    flex-basis: 65rem;
+}
+
+#contacto > figure img {
+    border-radius: 0.625rem;
+    width: 34.375rem;
+    box-shadow:
+        0 0.25rem 0.5rem rgba(100, 100, 100, 0.4),
+        0 0.5rem 1rem rgba(200, 200, 200, 0.3),
+        0 0.75rem 1.5rem rgba(255, 255, 255, 0.2);
+    transition: scale 0.3s ease;
+}
+
+#contacto > figure img:hover {
+    scale: 0.9;
+}
+
+/* Estudio */
+#estudio {
+    display: flex;
+    column-gap: 2.5rem;
+    align-items: center;
+}
+
+#estudio > .divTexto {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+}
+
+/* responsive */
+
+@media (325px <= width <= 1400px) {
+
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #containerVideo > video {
+        height: 850px;
+        object-fit: cover;
+    }
+
+    #containerVideo > div {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        row-gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        letter-spacing: 0.25rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6rem;
+        text-align: center;
+    }
+
+    .figurePersonajes {
+        display: none;
+    }
+
+    #miCarrusel {
+        display: block;
+    }
+
+    .carousel-item > img {
+        width: 24.375rem;
+        height: 33rem;
+    }
+
+    #sobreLaPelicula {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 850px;
+        position: relative;
+    }
+
+    #sobreLaPelicula::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    z-index: 0;
+}
+
+    #sobreLaPelicula > div {
+        position: relative;
+        z-index: 1;
+    }
+
+    #reparto {
+        flex-direction: column;
+        align-items: center;
+        background-color: #272d30;
+    }
+
+    #textoReparto {
+        padding: 1.5rem;
+        flex-basis: 0;
+    }
+
+    #curiosidades {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #2f3539;
+    }
+
+    .personajesCuriosidades > img,
+    #imagenesCuriosidades + div {
+        width: 100%;
+    }
+
+    #imagenesCuriosidades > figure:first-of-type {
+        display: none;
+    }
+
+    .personajesCuriosidades > img {
+        box-shadow: 0 0;
+        border-radius: 0;
+    }
+
+    .personajesCuriosidades {
+        overflow: hidden;
+        border-radius: 0;
+    }
+
+    .personajesCuriosidades img {
+        animation: zoom 5s ease-in-out infinite;
+    }
+
+    #curiosidades > #textoCuriosidades {
+        padding: 1.5rem;
+    }
+
+    @keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+    #contacto {
+        flex-direction: column;
+        gap: 2rem;
+        background-color: #383f43;
+    }
+
+    #contacto > div {
+        flex-basis: auto;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    #contacto > figure {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #contacto > figure img {
+        width: 100%;   
+        border-radius: 0;
+        box-shadow: 0 0;
+        animation: zoom 5s ease-in-out infinite;
+    }
+
+    #contacto > figure img:hover {
+        scale: 1;
+    }
+
+    #estudio {
+        flex-direction: column;
+        background-color: #42494e;
+    }
+
+    #estudio > .divTexto {
+        row-gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    iframe {
+        width: 390px;
+        height: auto;
+    }
+}

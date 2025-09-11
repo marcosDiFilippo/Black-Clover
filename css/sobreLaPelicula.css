@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'texto';
+    color: #eaeaea;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.75rem;
+    line-height: 2.5rem;
+}
+
+#video > video {
+    max-width: 1900px;
+}
+
+h1 {
+    position: absolute;
+    top: 7.8125rem;
+    left: 41.875rem;
+    font-size: 5rem;
+}
+
+h1, h2 {    
+    opacity: 2;
+    transition: opacity 2s ease;
+}
+
+.box {
+    display: flex;
+    background: #1a1a1a;
+    border-radius: 1rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.4);
+    max-width: 106.25rem;
+}
+
+.divTexto1, .divTexto {
+    flex: 1 1 60%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.divTexto1 > div,
+.divTexto > div {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.imagenes {
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+}
+
+.imagenes img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    overflow: hidden;
+    border-radius: 0;
+}
+
+figure img {
+    animation: zoom 5s ease infinite;
+}
+
+@keyframes zoom {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+h2 {
+    font-size: 1.875rem;
+    color: #ffd700;
+    margin-bottom: 0.625rem;
+}
+
+article p {
+    font-size: 1.25rem;
+    color: #d1d1d1;
+}
+
+strong {
+    color: #ffffff;
+}
+
+.spanDestacado {
+    color: #9ed2ff;
+    font-style: italic;
+}
+
+footer {
+    margin-top: 3.125rem;
+}
+
+footer > div > p:first-of-type {
+    margin-bottom: 3.125rem;
+}
+
+@media (325px <= width <= 1400px) {
+    video {
+        margin-top: 80px;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h1 {
+        position: relative;
+        left: 2rem;
+        top: 1rem;
+        font-size: 2.5rem;
+        display: inline-block;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    img {
+        border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .divTexto1, .divTexto {
+        text-align: justify;
+        padding: 1.5rem;
+    }
+}
